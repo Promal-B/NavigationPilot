@@ -1,8 +1,28 @@
+# macOS system files
 .DS_Store
-/.build
-/Packages
+
+# SwiftPM build artifacts
+.build/
+.swiftpm/
+Package.resolved  # Include this only if you're ignoring it for a library
+
+# SwiftPM package manager folders
+/Packages/
+
+# Xcode user data
 xcuserdata/
 DerivedData/
-.swiftpm/configuration/registries.json
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+
+# Xcode workspace data (auto-generated, safe to ignore)
+*.xcworkspace/
+xcshareddata/
+
+# Netrc (for auth secrets, optional)
 .netrc
+
+# Optional: Ignore logs or fastlane
+fastlane/report.xml
+fastlane/screenshots/
+
+# Optional: ignore sample project if not needed in source control
+SampleProject/
