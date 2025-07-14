@@ -15,7 +15,6 @@ let package = Package(
             targets: ["NavigationPilot"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/canopas/UIPilot.git", .upToNextMajor(from: "2.0.2")),
         .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", exact: "0.58.2")
     ],
     targets: [
@@ -23,9 +22,6 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "NavigationPilot",
-            dependencies: [
-                .product(name: "UIPilot", package: "uipilot"),
-            ],
             plugins: [
                 .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
             ]
